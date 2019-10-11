@@ -1,0 +1,61 @@
+.header {
+    .navbar-light {
+        height: 60px;
+
+        .container {
+            border-bottom: 2px solid rgb(243, 243, 243);
+        }
+
+        .navbar-toggler {
+            border-color: transparent;
+        }
+
+        .navbar-brand {
+            margin-right: 4em;
+
+            img {
+                width: 22px;
+            }
+        }
+
+        .navbar-collapse {
+            z-index: 99;
+            background: #FFF;
+        }
+
+        .navbar-nav {
+            .nav-link {
+                color: rgba(143, 143, 143, 1.0);
+                margin: 0 15px;
+                line-height: 30px;
+
+                >img {
+                    width: 30px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .navbar-nav.right-menu {
+            .nav-link {
+                margin: 0 10px;
+
+                >img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .right-menu {
+            display: inline-block;
+            width: 100%;
+            
+            .nav-link {
+                margin: 0 5px !important; 
+                display: inline-block;
+            }
+        }
+    }
+}

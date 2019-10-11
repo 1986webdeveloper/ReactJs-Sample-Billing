@@ -1,0 +1,50 @@
+.sidebar{
+    background: #fafafa;
+    .sidebar-header{
+        background: #573e5d; 
+        background: -moz-linear-gradient(top,  #573e5d 0%, #503856 52%, #442f49 66%, #442f49 66%, #2b1c2f 100%); 
+        background: -webkit-linear-gradient(top,  #573e5d 0%,#503856 52%,#442f49 66%,#442f49 66%,#2b1c2f 100%);
+        background: linear-gradient(to bottom,  #573e5d 0%,#503856 52%,#442f49 66%,#442f49 66%,#2b1c2f 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#573e5d', endColorstr='#2b1c2f',GradientType=0 );
+        color: #FFF;
+        padding: 10px 25px;
+
+        h4{
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+
+            img{
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+        p{
+            margin: 0 0 0 30px;
+        }
+    }
+    .sidebar-links{
+        padding: 10px;
+        .nav-link{
+            color: rgb(83, 58, 89);        
+            > img{
+                width: 16px;
+                margin-right: 10px;
+            }
+        }
+        .nav-link.active{
+            background: #efefef;
+            font-weight: bold;
+        }
+        .action-link{
+            padding: 5px 20px;   
+            span:last-child{
+                float: right;
+            }
+        }
+        .action-link.active{
+            background: transparent;
+            font-weight: bold;
+        }
+    }
+}

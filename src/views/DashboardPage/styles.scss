@@ -1,0 +1,31 @@
+.dashboard {
+    .invoice-section {
+        margin: 10px 0 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #f5f5f5;
+
+        h4 {
+            font-weight: bold;
+            font-size: 14px;
+            color: rgb(48, 48, 48);
+            text-transform: uppercase
+        }
+
+        .chart-section {
+            margin-top: 3em;
+        }
+    }
+
+    .statistics-filter-box {
+        float: right;
+
+        .dropdown-toggle {
+            background-color: transparent;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    }
+}

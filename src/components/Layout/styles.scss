@@ -1,0 +1,16 @@
+.layout{
+    .sidebar-box{
+        padding: 0;
+        max-width: 240px;
+        height: calc(100vh - 100px);
+    }
+
+    @media screen and (max-width: 768px) {
+        .sidebar-box{
+            padding: 0 15px;
+            max-width: 100%;
+            margin: 0 auto;
+            height: auto;
+        }
+    }
+}
