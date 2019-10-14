@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+import TagsInput from 'react-tagsinput';
+import 'react-tagsinput/react-tagsinput.css'
+
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -13,8 +17,13 @@ class SendInvoiceModal extends Component {
         super(props);
 
         this.state = {
+            recipients: [],
             invoiceItems: []
         }
+    }
+
+    selectRecipient = (recipients) => {
+        this.setState({ recipients })
     }
 
     addInvoiceItem = () => {
@@ -33,12 +42,18 @@ class SendInvoiceModal extends Component {
                             <InputGroup.Prepend>
                                 <InputGroup.Text id="basic-addon1"><i className="fa fa-users"></i></InputGroup.Text>
                             </InputGroup.Prepend>
-                            <FormControl
-                                placeholder="Select Recipient"
-                                className="recipient-form-control"
-                                aria-label="Username"
-                                aria-describedby="basic-addon1"
-                            />
+                            <TagsInput
+                                className={"recipient-tag-input"}
+                                tagProps={{
+                                    className: 'recipient-tag',
+                                    classNameRemove: 'recipient-tag-remove'
+                                }}
+                                inputProps={{
+                                    className: 'recipient-form-control',
+                                    placeholder: 'Select Recipient'
+                                }}
+                                value={this.state.recipients}
+                                onChange={this.selectRecipient} />
                         </InputGroup>
 
                         <InputGroup className="bb-1">

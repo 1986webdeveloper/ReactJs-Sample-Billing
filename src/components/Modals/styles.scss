@@ -104,6 +104,37 @@
         top: 2px;
     }
 
+    .recipient-tag-input {
+        border: none;
+        width: calc(100% - 50px);
+    }
+    .recipient-form-control{
+        border: none;
+        width: calc(100% - 20px);
+        height: 30px;
+    }
+    .recipient-form-control:focus{
+        outline: none;
+    }
+    .recipient-tag{
+        font-size: 13px;
+        background: #efefef;
+        border: 1px solid #969696;
+        padding: 2px 10px;
+        margin: 0 5px 3px 0;
+        border-radius: 5px;    
+        display: inline-block;
+    }
+    .recipient-tag a::before {
+        content: " ×";
+    }
+    .recipient-tag-input > span {
+        width: 100%;
+    }
+    .recipient-tag-input > span::after {
+        content: " +";
+    }
+
     @media screen and (min-width: 1200px) {
 
         .modal-dialog {

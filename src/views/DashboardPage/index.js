@@ -14,7 +14,12 @@ class DashboardPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      statistics_data : {
+        months: ['MARCH', 'APRIL', 'MAY', 'JUNE'],
+        sent : [60, 48, 30, 0],
+        paid : [20, 35, 40, 45],
+        unpaid : [0, 0, 10, 0],
+      }
     }
   }
 
@@ -72,7 +77,7 @@ class DashboardPage extends Component {
 
               <Row className='chart-section'>
                 <Col>
-                  <CustomBarChart />
+                  <CustomBarChart statistics_data={this.state.statistics_data} />
                 </Col>
               </Row>
             </div>
